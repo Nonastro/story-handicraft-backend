@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "کاسه سرامیکی دست‌ساز",
+    "price": 320000,
+    "description": "کاسه لعاب‌دار با نقش‌مایه الهام گرفته از طرح‌های ایرانی، مناسب برای سرو یا دکور.",
+    "image_url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80",
+    "model": "سرامیک",
+    "size": "قطر 16 سانتی‌متر",
+    "stok": 8
+  },
+  {
+    "id": 2,
+    "name": "گلدان شیشه‌ای نقاشی‌شده",
+    "price": 450000,
+    "description": "گلدان شیشه‌ای با نقاشی دست‌ساز مینیمال، مقاوم در برابر خراش و شست‌وشو.",
+    "image_url": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80",
+    "model": "شیشه و رنگ",
+    "size": "ارتفاع 20 سانتی‌متر",
+    "stok": 5
+  },
+  {
+    "id": 3,
+    "name": "قالیچه دست‌بافت طرح خشتی",
+    "price": 2100000,
+    "description": "قالیچه پشمی با رنگ‌های گیاهی و بافت متراکم، مناسب برای فضاهای نشیمن کوچک.",
+    "image_url": "https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?auto=format&fit=crop&w=800&q=80",
+    "model": "بافت",
+    "size": "100×70 سانتی‌متر",
+    "stok": 2
+  },
+  {
+    "id": 4,
+    "name": "ست لیوان مسی قلم‌زنی",
+    "price": 780000,
+    "description": "ست دو عددی لیوان مسی با پوشش قلع و قلم‌زنی سنتی برای نوشیدنی‌های گرم و سرد.",
+    "image_url": "https://images.unsplash.com/photo-1513623954575-263b061498a5?auto=format&fit=crop&w=800&q=80",
+    "model": "مس",
+    "size": "گنجایش 250 میلی‌لیتر",
+    "stok": 10
+  },
+  {
+    "id": 5,
+    "name": "چراغ رومیزی چوب و فلز",
+    "price": 1190000,
+    "description": "چراغ مینیمال با ترکیب چوب گردو و فلز برنجی، همراه با لامپ ادیسونی دکوراتیو.",
+    "image_url": "https://images.unsplash.com/photo-1473181488821-2d23949a045a?auto=format&fit=crop&w=800&q=80",
+    "model": "چوبی",
+    "size": "ارتفاع 30 سانتی‌متر",
+    "stok": 4
+  },
+  {
+    "id": 6,
+    "name": "دفترچه دست‌ساز جلد چرم",
+    "price": 260000,
+    "description": "دفترچه 120 برگ با جلد چرم گیاهی دست‌دوز و کاغذ کرم ضخیم برای یادداشت یا طراحی.",
+    "image_url": "https://images.unsplash.com/photo-1455884981818-54cb785db6fc?auto=format&fit=crop&w=800&q=80",
+    "model": "چرم",
+    "size": "14×20 سانتی‌متر",
+    "stok": 12
+  }
+]

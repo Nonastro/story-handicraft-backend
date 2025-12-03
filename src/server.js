@@ -1,8 +1,13 @@
 import http from 'http'
 import { URL } from 'url'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import { loadProducts, searchProducts, findProductById, listProductIds } from './lib/products.js'
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 3000
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const publicDir = path.join(__dirname, 'public')
 
 function setCors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
@@ -48,6 +53,28 @@ const server = http.createServer(async (req, res) => {
     } catch (error) {
       console.error('Failed to list products', error)
       return sendJson(res, 500, { message: 'خطا در دریافت محصولات' })
+    }
+  }
+
+  // Serve static images: GET /images/<filename>
+  if (req.method === 'GET' && url.pathname.startsWith('/images/')) {
+    try {
+      const relPath = url.pathname.replace('/images/', '')
+      const safeRel = relPath.replace(/\\/g, '/').replace(/\.+/g, '.')
+      const imgPath = path.join(publicDir, 'images', safeRel)
+      if (!fs.existsSync(imgPath) || !fs.statSync(imgPath).isFile()) {
+        res.statusCode = 404
+        return res.end('Not Found')
+      }
+      const ext = path.extname(imgPath).toLowerCase()
+      const type = ext === '.png' ? 'image/png' : ext === '.webp' ? 'image/webp' : 'image/jpeg'
+      const stream = fs.createReadStream(imgPath)
+      res.writeHead(200, { 'Content-Type': type, 'Cache-Control': 'public, max-age=31536000' })
+      return stream.pipe(res)
+    } catch (error) {
+      console.error('Failed to serve image', error)
+      res.statusCode = 500
+      return res.end('Internal Server Error')
     }
   }
 

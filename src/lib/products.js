@@ -12,7 +12,7 @@ function normalizeProduct(raw) {
     name: raw.name || 'محصول بدون نام',
     price: Number(raw.price || 0),
     description: raw.description || '',
-    image_url: raw.image_url || raw.image || '',
+    image_url: raw.image_url || raw.image || `/images/${raw.id}.jpg`,
     model: raw.model || raw.category || 'محصول',
     size: raw.size || '',
     stok: typeof raw.stok === 'number' ? raw.stok : (raw.stock ?? 0)

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "story-handicraft-backend",
   "version": "1.0.0",
   "description": "Lightweight backend API for story-handicraft using JSON only.",

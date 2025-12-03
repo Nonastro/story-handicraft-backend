@@ -1,23 +1,21 @@
 {
   "name": "story-handicraft-backend",
   "version": "1.0.0",
-  "description": "Lightweight backend API for story-handicraft with MongoDB.",
+  "description": "Lightweight backend API for story-handicraft using JSON only.",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
-    "import": "node scripts/import-products.js"
+    "import": "echo 'JSON-only backend: import not applicable'"
   },
   "keywords": [
     "api",
     "handicraft",
     "products",
-    "mongodb"
+    "json"
   ],
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "mongoose": "^6.0.0"
-  }
+  "dependencies": {}
 }
